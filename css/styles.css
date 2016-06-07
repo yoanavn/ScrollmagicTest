@@ -144,9 +144,9 @@ html {
   padding: 20px;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s cubic-bezier(1, -.5, .2, 1.5);
+  -moz-transition: all 0.3s cubic-bezier(1, -.5, .2, 1.5);
+  transition: all 0.3s cubic-bezier(1, -.5, .2, 1.5);
 }
 [type=radio]:checked ~ label {
   z-index: 2;
@@ -165,7 +165,7 @@ html {
   visibility: visible;
 }
 .tab-labels {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
     position: relative;
     text-align: justify;
 }
@@ -182,14 +182,14 @@ html {
 }
 .underline-active {
     position: absolute;
-    bottom: -2px;
+    bottom: -3px;
     left: 0;
-    height: 2px;
+    height: 3px;
     background: #fff;
     width: 75px;
-    -webkit-transition: all 0.5s ease-in;
-    -moz-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.3s cubic-bezier(1, -.5, .2, 1.5);
+    -moz-transition: all 0.3s cubic-bezier(1, -.5, .2, 1.5);
+    transition: all 0.3s cubic-bezier(1, -.5, .2, 1.5);
 }
 
 

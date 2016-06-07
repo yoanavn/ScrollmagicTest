@@ -53,14 +53,7 @@ $(document).ready(function() {
 
 
     $('.js-move-tab-underline').on('click', function(){
-        console.log($(this).width());
-        $(this).siblings('.underline-active').css('width', $(this).width());
-
-
-        /*.width($(".main-phase-titles label").width())
-        .css("left", $(".main-phase-titles label:eq(0)").position().left)
-        .data("origLeft", $magicLine.position().left)
-        .data("origWidth", $magicLine.width());*/
+        $(this).siblings('.underline-active').css({'width': $(this).width(), "left": $(this).position().left});
     });
 
 

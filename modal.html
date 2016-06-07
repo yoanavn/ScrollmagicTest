@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kookie Cat</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Modal Window</h1>  
+    </header>
+
+    <section class="cd-section">
+
+        <div class="cd-modal-action">
+            <a class="btn" data-type="modal-trigger">Fire Modal Window</a>
+            <span class="cd-modal-bg"></span>
+        </div> <!-- cd-modal-action -->
+
+        <div class="cd-modal">
+            <div class="cd-modal-content">
+                <section class="tabs">
+                    <div class="tab-labels">
+                        <label for="tab-1" class="js-move-tab-underline">Description</label>
+                        <label for="tab-2" class="js-move-tab-underline">Ingredients</label>
+                        <label for="tab-3" class="js-move-tab-underline">Nutritional Facts</label>
+                        <span class="underline-active"></span>
+                    </div>
+                    <div class="tab">
+                        <input type="radio" id="tab-1" name="tab-group-1" checked>
+
+                        <div class="content">
+                            <h1>Description</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae convallis neque.</p>
+                        </div> 
+                    </div>
+
+                    <div class="tab">
+                        <input type="radio" id="tab-2" name="tab-group-1">
+
+                        <div class="content">
+                            <h1>Ingredients</h1>
+                            <p>Suspendisse semper odio ac tellus volutpat, eu sagittis ante bibendum. Cras facilisis eros vitae quam gravida, nec bibendum diam gravida.</p>
+                        </div> 
+                    </div>
+
+                    <div class="tab">
+                        <input type="radio" id="tab-3" name="tab-group-1">
+
+                        <div class="content">
+                            <h1>Nutritional Facts</h1>
+                            <p>Ut faucibus metus eu urna accumsan, vel vestibulum sapien hendrerit.</p>
+                        </div> 
+                    </div>
+                </section>
+            </div> <!-- cd-modal-content -->
+        </div> <!-- cd-modal -->
+
+        <a class="cd-modal-close">Close</a>
+    </section> <!-- .cd-section -->
+
+    <!-- BOF Scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- EOF Scripts -->
+</body>
+</html>

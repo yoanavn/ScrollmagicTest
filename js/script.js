@@ -2,31 +2,42 @@ $(document).ready(function() {
     'use strict';
 
 
-    if ($("#path").length) {
+    if ($("#Path_Y").length) {
         function pathPrepare ($el) {
             var lineLength = $el[0].getTotalLength();
             $el.css("stroke-dasharray", lineLength);
             $el.css("stroke-dashoffset", lineLength);
         }
 
-        var $path = $("#path");
+        var $Y = $("#Path_Y");
+        var $O = $("#Path_O");
+        var $A1 = $("#Path_A_1_");
+        var $N = $("#Path_N");
+        var $A = $("#Path_A");
 
         // prepare SVG
-        pathPrepare($path);
+        pathPrepare($Y);
+        pathPrepare($O);
+        pathPrepare($A1);
+        pathPrepare($N);
+        pathPrepare($A);
 
         // init controller
         var controller = new ScrollMagic.Controller();
 
         // build tween
         var tween = new TimelineMax()
-            .add(TweenMax.to($path, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
-            // .add(TweenMax.to($dot, 0.1, {strokeDashoffset: 0, ease:Linear.easeNone}))  // draw dot for 0.1
-            .add(TweenMax.to($path, 1, {stroke: "#33629c", ease:Linear.easeNone}), 0);         // change color during the whole thing
+            .add(TweenMax.to($Y, 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
+            .add(TweenMax.to($O, 0.4, {strokeDashoffset: 0, ease:Linear.easeNone}))  // draw dot for 0.1
+            .add(TweenMax.to($A1, 0.6, {strokeDashoffset: 0, ease:Linear.easeNone}))  // draw dot for 0.1
+            .add(TweenMax.to($N, 0.7, {strokeDashoffset: 0, ease:Linear.easeNone}))  // draw dot for 0.1
+            .add(TweenMax.to($A, 1, {strokeDashoffset: 0, ease:Linear.easeNone}))  // draw dot for 0.1
+            // .add(TweenMax.to($Y, 1, {stroke: "#33629c", ease:Linear.easeNone}), 0);         // change color during the whole thing
 
         // build scene
-        var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 500, tweenChanges: true})
+        var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 300, tweenChanges: true})
                         .setTween(tween)
-                        // .addIndicators() // add indicators (requires plugin)
+                        .addIndicators() // add indicators (requires plugin)
                         .addTo(controller);
     }
 
@@ -46,10 +57,10 @@ $(document).ready(function() {
         $(this).siblings('.underline-active').css('width', $(this).width());
 
 
-        .width($(".main-phase-titles label").width())
+        /*.width($(".main-phase-titles label").width())
         .css("left", $(".main-phase-titles label:eq(0)").position().left)
         .data("origLeft", $magicLine.position().left)
-        .data("origWidth", $magicLine.width());
+        .data("origWidth", $magicLine.width());*/
     });
 
 

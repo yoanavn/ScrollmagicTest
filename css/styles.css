@@ -96,8 +96,15 @@ html {
     height: 100%;
     position: relative;
 }
-svg {
-    margin-top: 50px;
+.text-animation {
+  position: relative;
+}
+.text-animation img,
+.text-animation svg {
+  position: absolute;
+}
+.text-animation img {
+  mask: url(#mask);
 }
 
 
